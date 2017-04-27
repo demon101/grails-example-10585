@@ -7,10 +7,10 @@ class TestDomain {
     }
 
     def beforeValidate(){
-        log.error "${name}: beforeValidate hasChanged:${hasChanged('name')}"
+        log.error "${name}: beforeValidate hasChanged:${hasChanged('name')}, isDirty:${isDirty('name')}"
     }
 
     def beforeUpdate () {
-        log.error "${name}: beforeValidate hasChanged:${hasChanged('name')}, getOriginalValue:${getOriginalValue('name')}"
+        log.error "${name}: beforeValidate hasChanged:${hasChanged('name')}, getOriginalValue:${getOriginalValue('name')}, isDirty:${isDirty('name')}, ${getPersistentValue('name')}"
     }
 }
